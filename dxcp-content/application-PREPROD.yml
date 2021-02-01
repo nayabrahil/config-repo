@@ -1,0 +1,28 @@
+spring:
+  profiles: PREPROD
+
+server:
+  port: 8080
+
+bucket:
+  name: content
+  user: content
+  secret: AQICAHiYL8nqLfEa0iSYR3SCBGLr1YFFRt/vKyCVbdvybPE03QHtGp57e//SmYyOa+JjlUPLAAAAajBoBgkqhkiG9w0BBwagWzBZAgEAMFQGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMxvQ4kEu+QcMqS7dkAgEQgCeEWMN84Op2Z3JEURwwCiGCiLppYKkHp/OxPaQeSrQzS8feZs9Nw0o=
+  hostname: 10.120.121.157,10.120.121.169,10.120.121.214
+  region: eu-west-1
+
+auth:
+  key: R+TmAnbmvygoHEeVo5xVjSvkSiarva6x0H0ljhYVjH0=
+
+exclude:
+  uri: /v1/_status,/swagger-ui.html,/webjars,swagger,/v2/api-docs,/csrf
+
+environment: PREPROD
+
+version:
+  limit: 2
+
+models:
+  baseUrl: http://52.149.66.87/v1/contentmodel/validate
+  connectionTimeout: 100
+  readTimeout: 100

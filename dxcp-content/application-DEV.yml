@@ -1,0 +1,26 @@
+spring:
+  profiles: DEV
+
+server:
+  port: 8080
+
+bucket:
+  name: content
+  user: content
+  secret: DPoPWvJ20DJ9GP6hmFyR8oI5VRPnuZvRD1sqEnXUfK376KHjvuNM1D//Rv/t7ItCXaRAQRNgzJK2Rrr2swMYFOuQQvRuk25nF+CxOVP5jAi3sYuIn6vk4FalF697nHt5WhYA9bpGQEJ4YI4CWAx1ApYGOWaxynOSrjmoQPwREm0fqHVxWSm6a1b+OhFOgU5RbzsTgwVHJ2YvVrT0sHcZaL+BKpGRmXDLwGax4AXzK6M263oWKmBwhSspLnqWjTSH7SzIUKRPoPt3QkGtnlxBtjImTQ42YKqGg60Cfh7iHh9ynQfLlMu+++/KVj8USiHPdW5icIH9GzpxIq9O+a1qyw==
+  hostname: couchbase.infra
+  region: eu-west-1
+
+auth:
+  key: R+TmAnbmvygoHEeVo5xVjSvkSiarva6x0H0ljhYVjH0=
+
+exclude:
+  uri: /v1/_status,/swagger-ui.html,/webjars,swagger,/v2/api-docs,/csrf,/_status
+
+version:
+  limit: 2
+
+models:
+  baseUrl: http://52.149.66.87/v1/contentmodel/validate
+  connectionTimeout: 100
+  readTimeout: 100

@@ -1,0 +1,36 @@
+application:
+  name: content-management
+
+server:
+  port: 9095
+
+bucket:
+  name: content
+  user: Administrator
+  secret: admin1
+  hostname: localhost
+  region: eu-west-1
+
+auth:
+  key: dcp
+
+exclude:
+  uri: /v1/_status,/swagger-ui.html,/webjars,swagger,/v2/api-docs,/csrf
+
+version:
+  limit: 2
+
+models:
+  baseUrl: http://localhost:9094/v1/contentmodel/validate
+  connectionTimeout: 100
+  readTimeout: 100
+spring:
+  jackson:
+    default-property-inclusion: non_null
+    deserialization:
+      FAIL_ON_READING_DUP_TREE_KEY: on
+      FAIL_ON_UNKNOWN_PROPERTIES: on
+      ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT: on
+      ACCEPT_EMPTY_STRING_AS_NULL_OBJECT: on
+  jpa:
+    show-sql: true
